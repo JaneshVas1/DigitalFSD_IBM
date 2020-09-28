@@ -1,64 +1,82 @@
-<!DOCTYPE html>
 <html>
 <head>
-	<title>Bootstrap - Assignment 2</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Bootstrap - Grid system</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
-<body>
+<body class="container">
+    <style type="text/css">
+        img {
+            width: 300px;
+            height: 300px;
+            display: block;
+            margin: 40px auto;
+        }
+        /* .card {
+            margin-left: 200px;
+            margin-right: 200px;
+            margin-top: 20px;
+            overflow: hidden; */
+        /* width: 400px;
+            height: 400px; */
+        /* } */
+        .bell {
+            margin-top: 20px;
+            /* margin-left: 30px; */
+            float: right;
+        }
+        .profile {
+            background-color: #FF1A75;
+        }
+        .list-unstyled {
+            display: block;
+            margin-left: 250px;
+        }
+    </style>
+    <div class="card">
+        <div class="profile">
+            <div class="bell">
+            </div>
+            <img src="images/bird2.jpg" class="rounded-circle img-fluid">
+            <h5 style="text-align: center; color: white;">Jonny Luil</h5>
+            <h6 style="text-align: center; color: white;">China</h6>
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li style="color: white;">233</li>
+                        <li style="color: white;">Follows</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li style="color: white;">349</li>
+                        <li style="color: white;">Following</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <table class="table table-border">
+            <tr>
+                <td><p class="text-center font-weight-bolder">Shots </p></td>
+                <td><p class="text-center font-weight-bolder">35 ></p></td>
+            </tr>
+            <tr>
+                <td><p class="text-center font-weight-bolder">Likes </p></td>
+                <td><p class="text-center font-weight-bolder">236 > </p></td>
+            </tr>
+            <tr>
+                <td><p class="text-center font-weight-bolder">Buckets </p></td>
+                <td><p class="text-center font-weight-bolder">26 > </p></td>
 
-<div class="row-md-4" style="background-color: rgb(255,0,128);text-align: center;padding-left: 40px;">
+            </tr>
+            <tr>
+                <td><p class="text-center font-weight-bolder">Tags </p></td>
+                <td><p class="text-center font-weight-bolder">100 > </p></td>
 
-	<p style="float:left; color:white;font-size:20px;position: relative;left: 5em"><img src="images/nature.jpg" width="20px" height="20px"  class="rounded-circle" alt="Image couldn't be loaded"></p>
-	<br/>
-
-	<p style="float:left; color:white;font-size:20px;position: relative;right: : 11em"><img src="images/blue.jpg" width="20px" height="100px"  class="rounded-circle" alt="Image couldn't be loaded"></p>
-
-
-	<br/>
-
-	<p style="float:left; color:white;font-size:20px;position: relative;right: : 12em"><img src="images/blue.jpg" width="100px" height="100px"  class="rounded-circle" alt="Image couldn't be loaded"></p>
-	<br/>
-	<p style="color:white;font-size:20px">Johny Lulu</p>
-	<p style="color:white;font-size:20px">China</p>
-	<br/>		
-	<p style="float:left; color:white;font-size:20px;position: relative;left: 5em">233</p>		
-	<p style="float:right;color:white;font-size:20px;position: relative;right: 11em">349</p>	
-	<br/>
-	<p style="float:left; color:white;font-size:20px;position: relative;left: 3em">Follows</p>		
-	<p style="float:right;color:white;font-size:20px;position: relative;right: 8em">Following</p>	
-	<br/>
-	<br/>
-
-</div>
-
-<div class="row-md-3>">
-
-	<div class="card">
-		<div class="card-body">
-		<p style="float:left; color:black;font-size:15px;position: relative;left: 5em"><img src="images/nature.jpg" width="30px" height="20px" class="rounded-circle" alt="Image couldn't be loaded">Shots</p>		
-		<p style="float:right;color:black;font-size:15px;position: relative;right: 5em">35 ></p>	
-		</div>
-	</div>
-	<div class="card">
-		<div class="card-body">
-		<p style="float:left; color:black;font-size:15px;position: relative;left: 5em"><img src="images/nature.jpg" width="30px" height="20px" class="rounded-circle" alt="Image couldn't be loaded">Likes</p>		
-		<p style="float:right;color:black;font-size:15px;position: relative;right: 5em">236 ></p>	
-		</div>
-	</div>
-		<div class="card">
-		<div class="card-body">
-		<p style="float:left; color:black;font-size:15px;position: relative;left: 5em"><img src="images/nature.jpg" width="30px" height="20px" class="rounded-circle" alt="Image couldn't be loaded">Buckets</p>		
-		<p style="float:right;color:black;font-size:15px;position: relative;right: 5em">26 ></p>	
-		</div>
-	</div>
-		<div class="card">
-		<div class="card-body">
-		<p style="float:left; color:black;font-size:15px;position: relative;left: 5em"><img src="images/nature.jpg" width="30px" height="20px" class="rounded-circle" alt="Image couldn't be loaded">Tags</p>		
-		<p style="float:right;color:black;font-size:15px;position: relative;right: 5em">100 ></p>	
-		</div>
-	</div>
-</div>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>
