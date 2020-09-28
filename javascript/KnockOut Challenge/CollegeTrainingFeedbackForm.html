@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Feedback Form</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script type="text/javascript">
+        function calculateFeedbackRating()
+        {
+            let val = document.forms["form1"]["trainerFeedback"].value;
+            let trainerName = document.forms["form1"]["trainerName"].value;
+            let res=0
+            if (val=='Excellent')
+                res=5;
+            else if (val=='Very Good')
+                res=4;   
+            else if (val=='Good')
+                res=3;
+            else if (val=='Average')
+                res=2;
+            else 
+                res=1;
+        varResult = document.getElementById("result");
+        varResult.innerHTML = `Feedback rating of ${trainerName} is ${res}`;
+
+        return false;
+        }
+
+    </script>
+    <style>
+    body{
+        
+        background-color: #FFAACC;
+    }
+    
+    h1{
+
+        color: #770080;
+        font-style: italic;
+        font-family:Courier New
+    }
+
+    b{
+        
+        border-left:thin medium blue;
+        color: #770080;
+        font-style: italic;
+        font-family:Courier New
+
+    }
+    </style>
+
+
+</head>
+<body class="container">
+<h1>College Training Feedback Form</h1>
+<form id="form1" name="form1"  onSubmit="return false">
+    <div>
+    <table>
+        <tr>
+            <td><label for="participantName">Participant Name</label></td>
+            <td><input type="text" class="form-control" id="participantName" name="participantName" required="true" placeholder="Participant Name"></td>
+        </tr>
+        <tr>
+            <td><label for="collegeName">College Name</label></td>
+            <td><input type="text" class="form-control" id="collegeName" name="collegeName" required="true" placeholder="College Name"></td>
+        </tr>
+        <tr>
+            <td><label for="participantAddress">Participant Address</label></td>
+            <td>
+                <textarea name="participantAddress" class="form-control" required="true" rows="4" cols="50" placeholder="Participant Address">
+                
+                </textarea>
+        </tr>
+        <tr>
+            <td><label for="gender">Gender</label></td>
+            <td> 
+                <input type="radio" name="gender" value="Male" selected> Male
+                <input type="radio" name="gender" value="Female"> Female
+            </td>
+        </tr>
+        <tr>
+            <td><label for="email">Email ID</label></td>
+            <td><input type="email" class="form-control" id="email" name="email" required="true" placeholder="Email ID"></td>
+        </tr>
+        <tr>
+            <td><label for="mobileNumber">Mobile Number</label></td>
+            <td><input type="tel" class="form-control" id="mobileNumber" name="mobileNumber" required="true" pattern="[789][0-9]{9}" title="Mobile number starting with 7,8,9 and ten digits" placeholder="Mobile Number"></td>
+        </tr>
+        <tr>
+            <td><label for="trainerName">Trainer's Name</label></td>
+            <td><input type="text" class="form-control" id="trainerName" name="trainerName" required="true" placeholder="Trainer's Name"></td>
+        </tr>
+                <tr>
+            <td><label for="courseName">Course Name</label></td>
+            <td><input type="text" class="form-control" id="courseName" name="courseName" required="true" placeholder="Course Name"></td>
+        </tr>
+                <tr>
+            <td><label for="dateofcompletion">Course Completion date</label></td>
+            <td><input type="date" class="form-control" id="dateofcompletion" name="dateofcompletion" required="true" placeholder="Course Completion date"></td>
+        </tr>
+                <tr>
+            <td><label for="trainerFeedback">Trainer's Feedback</label></td>
+            <td>
+                <datalist id="feedback">
+                  <option value="Excellent"/>
+                  <option value="Very Good"/>
+                  <option value="Good"/>
+                  <option value="Average"/>
+                  <option value="Below Average"/>
+                </datalist>
+                <input list="feedback" class="form-control" id="trainerFeedback" name="trainerFeedback" required="true" placeholder="Trainer's Feedback"></td>
+        </tr>
+        <tr>
+        <td><button type="submit" onclick="calculateFeedbackRating()" class="btn btn-primary">Submit Feedback</button>
+            <button type="button" onclick="this.form.reset();" class="btn btn-secondary">Clear</button>
+        </td>
+        </tr>
+         </table>
+        </form>
+        </div>
+            <div>
+                <p><b id='result'></b></p>
+            </div>
+</body>
+</html>
