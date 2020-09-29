@@ -24,7 +24,7 @@
     <style>
     body{
         
-        background-color: #FFAACC;
+        background-color: navajowhite;
     }
     
     h1{
@@ -36,7 +36,7 @@
 
     b{
         
-        border-left:thin medium blue;
+
         color: #770080;
         font-style: italic;
         font-family:Courier New
@@ -59,7 +59,7 @@
             </td>
             <td>
                 <div class='container'>
-                <input type="text" class="form-control" id="loginId" name="loginId" required="true" placeholder="Login Id"/>
+                <input type="text" class="form-control" id="loginId" name="loginId" pattern="^[A-Za-z][A-Za-z0-9 -]+$" required="true" placeholder="Login Id"/>
                 </div>
             </td>
         </tr>
@@ -72,7 +72,7 @@
             </td>
             <td>
                 <div class='container'>    
-                <input type="password" class="form-control" id="passwd" name="passwd" required="true" placeholder="Password"/>
+                <input type="password" class="form-control" id="passwd" name="passwd" pattern="^[A-Za-z0-9#%$! -]+$" required="true" placeholder="Password"/>
                 </div>
 
             </td>
