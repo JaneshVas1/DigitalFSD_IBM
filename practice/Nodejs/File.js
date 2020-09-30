@@ -24,7 +24,12 @@ file_detailsasync=fs.readdir('../test',(err,data)=> {
 console.log("here");
 const path=require('path');
 let x= path.parse(__filename);
-let y=path.dirname('./');
+let y=path.parse(__dirname);
 console.log('x= '+x);
 console.log('y='+y);
+
+
+
+
+
 
