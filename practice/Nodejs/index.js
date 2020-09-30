@@ -1,0 +1,11 @@
+const returnFirstName=require('./first_name');
+const returnLastName=require('./second_name');
+const returnFullName=require('./first_name_last_name_concatination');
+let firstNameResult=returnFirstName.firstName('John');
+console.log(firstNameResult);
+let testResult=returnFirstName.firstName('3444');
+console.log(testResult);
+let lastNameResult=returnLastName.lastName('Doe');
+console.log(lastNameResult);
+let fullNameResult=returnFullName.concat('John' ,'Doe');
+console.log(fullNameResult);
