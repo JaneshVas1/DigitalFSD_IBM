@@ -21,8 +21,20 @@ emitter1.on('addThreenumbers',(first,second,third)=>{
 });
 
 
+
 emitter1.emit('addTwonumbers',200,50);
 emitter1.emit('addThreenumbers',200,50,30);
+
+
+
+const emitter2  = new EventEmitter();
+
+emitter2.on('logMessage',(args1,args2)=>{
+    console.log(args1);
+    console.log(args2);
+})
+
+emitter2.emit('logMessage',{id:1,name:'John Doe'},{id:2,name:'Marry Public'})
 
 
 
