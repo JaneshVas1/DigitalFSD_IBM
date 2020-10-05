@@ -58,8 +58,10 @@ const server = http.createServer((req, res) => {
 
             fs.writeFileSync('message.txt', message);
 
-        });
 
+        });
+        res.setHeader('Location','/');
+        res.statusCode=302;
         return res.end();
 
     }
