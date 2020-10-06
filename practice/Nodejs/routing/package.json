@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon Appgenres.js"
+    "start": "nodemon ExpressRouter.js"
   },
   "author": "",
   "license": "ISC",
