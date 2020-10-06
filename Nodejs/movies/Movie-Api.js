@@ -69,6 +69,21 @@ app.put('/api/movies/:id', (req, res) => {
 
 });
 
+app.delete('/api/movies/:id', (req, res) => {
+
+    const movie = movies.find(c => c.id === parseInt(req.params.id));
+
+    if (!movie) return res.status(404).send('The movie with the given ID was not found.');
+
+
+
+    const index=movies.indexOf(movie);
+    movies.splice(index, 1);
+    res.send(movie);
+
+});
+
+
 //path variable(:name)
 
 app.get('/api/moviesname/:name', (req, res) => {

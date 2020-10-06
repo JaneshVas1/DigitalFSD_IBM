@@ -72,6 +72,22 @@ app.get('/api/generes1/:name', (req, res) => {
 
 })
 
+app.delete('/api/generes/:id', (req, res) => {
+
+    const genre = generes.find(c => c.id === parseInt(req.params.id));
+
+    if (!genre) return res.status(404).send('The genre with the given ID was not found.');
+
+
+
+    const index=generes.indexOf(genre);
+	generes.splice(index, 1);
+	res.send(genre);
+
+});
+
+
+
 
 app.put('/api/generes/:id', (req, res) => {
 
@@ -98,7 +114,7 @@ app.put('/api/generes/:id', (req, res) => {
 
 app.post('/api/generes', (req, res) => {
 
-	
+
     const { error } = validateGenre(req.body);
 
     if (error) return res.status(400).send(error.details[0].message);
