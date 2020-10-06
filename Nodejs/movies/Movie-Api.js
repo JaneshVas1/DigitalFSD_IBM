@@ -47,7 +47,27 @@ app.get('/api/moviesid/:id', (req, res) => {
 
 })
 
+app.put('/api/movies/:id', (req, res) => {
 
+    const movie = movies.find(c => c.id === parseInt(req.params.id));
+
+    if (!movie) return res.status(404).send('The movie with the given ID was not found.');
+
+
+
+    const { error } = validateMovie(req.body);
+
+    if (error) return res.status(400).send(error.details[0].message);
+
+    console.log(movie.name);
+
+    movie.name = req.body.name;
+
+    console.log(movie.name);
+
+    res.send(movie);
+
+});
 
 //path variable(:name)
 
