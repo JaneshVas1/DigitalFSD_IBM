@@ -1,5 +1,5 @@
 const express=require('express');
-
+const Joi=require('joi');
 const app=express();
 
 app.use(express.json());
@@ -77,6 +77,11 @@ app.get('/api/generes1/:name', (req, res) => {
 
 app.post('/api/generes', (req, res) => {
 
+	
+    const { error } = validateGenre(req.body);
+
+    if (error) return res.status(400).send(error.details[0].message);
+
 const genre={
 
     id:generes.length+1,
@@ -99,4 +104,18 @@ app.listen(port, function(){
 
     console.log('server started listening on port number',port);
 
-})
+});
+
+function validateGenre(genre) {
+
+    const schema = {
+
+        name: Joi.string().min(5).required()
+
+    };
+
+
+
+    return Joi.validate(genre, schema);
+
+}
