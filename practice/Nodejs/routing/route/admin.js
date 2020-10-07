@@ -16,7 +16,7 @@ router.post('/product',(req, res) => {
 
     console.log(req.body);
 
-    res.redirect('/admin/add-product');
+    res.redirect('/');
 
 });
 
