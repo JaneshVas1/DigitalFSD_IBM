@@ -10,7 +10,7 @@ const adminRoutes=require('./route/admin');
 
 const shopRoutes=require('./route/shop');
 
-app.use(adminRoutes);
+app.use('/admin',adminRoutes);
 
 app.use(shopRoutes);
 
