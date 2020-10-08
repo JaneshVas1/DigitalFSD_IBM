@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="198ae5a6-c8f5-4d61-a088-2b1cacb530cb" name="Default Changelist" comment="Regsitration Form">
-      <change afterPath="$PROJECT_DIR$/practice/Nodejs/routing/Appgenres.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/Nodejs/mongodb/dbconnect.js" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/mongodb/dbconnect.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/Pixogram" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -67,6 +68,7 @@
       <workItem from="1601869322502" duration="274000" />
       <workItem from="1601869997171" duration="433000" />
       <workItem from="1601956577823" duration="670000" />
+      <workItem from="1602133380606" duration="3244000" />
     </task>
     <task id="LOCAL-00001" summary="Login Form">
       <created>1601364828468</created>
@@ -113,6 +115,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Regsitration Form" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1602137435202">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1602137435202" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1601371109757">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
