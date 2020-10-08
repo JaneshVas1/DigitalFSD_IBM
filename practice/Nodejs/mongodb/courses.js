@@ -43,7 +43,7 @@ async function createCourse(name,author,tags,date,isPublished,price) {
 }
 async function createCourses(){
         let answers = [];
-        r1.question('name? author? tags isPublished price',answer=>{
+        r1.question('name? author? tags? isPublished? price?',answer=>{
             answers=answer.split(',');
             createCourse(answers[0],answers[1],answers[2].split(' '),new Date(),answers[3],answers[4]);
             r1.close();
@@ -86,6 +86,27 @@ async function findCoursebyAuthor(authorname) {
 
 }
 
+async function findPublishedCourses() {
+    await Courses.find({isPublished: true}).select('name author price').sort({price:-1}).then(function (result) {
+        console.log('Display Published Courses'+ result);
+    })
+
+        .catch(error => {
+            console.log('Course not found');
+        })
+
+}
+
+async function findCoursesGreaterthanPrice(conditionPrice) {
+    await Courses.find({price: { $gt: conditionPrice }}).select('name author price').sort({price:-1}).then(function (result) {
+        console.log('Display Published Course with Price Condition'+ result);
+    })
+
+        .catch(error => {
+            console.log('Course not found');
+        })
+
+}
 
 
 
@@ -94,8 +115,10 @@ async function run()
 
     //createCourses();
     //await getCourses();
-    await findCoursebyId('5f7ee4208c97895808b3fddf');
-    await findCoursebyAuthor('Poi');
+    //await findCoursebyId('5f7ee4208c97895808b3fddf');
+    //await findCoursebyAuthor('Poi');
+    await findPublishedCourses();
+    await findCoursesGreaterthanPrice(15);
 }
 
 run().then(function (){
