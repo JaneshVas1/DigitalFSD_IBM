@@ -75,15 +75,48 @@ async function getStudents() {
     console.log('Display Students'+ result);
 }
 
+
+async function findStudentbyId(id) {
+    await Student.findById(id).then(function (result) {
+        console.log('Display Student details with Id '+ result);
+    })
+
+    // let res = await Student.findById(id).then(function (){
+        //console.log(id);
+        //console.log('Display Student details'+ res);
+       // console.log(console.log('Display Student details'+ res););
+        .catch(error => {
+        console.log('Student not found');
+    })
+
+}
+
+async function findStudentbyName(name) {
+    await Student.find({firstName: name}).then(function (result) {
+        console.log('Display Student details with name'+ result);
+    })
+
+
+        // let res = await Student.findById(id).then(function (){
+        //console.log(id);
+        //console.log('Display Student details'+ res);
+        // console.log(console.log('Display Student details'+ res););
+        .catch(error => {
+            console.log('Student not found');
+        })
+
+}
 async function run()
 {
     await getStudents();
+    await findStudentbyId('5f7ea247900e1a2f443590cc');
+    await findStudentbyName('John');
 }
 
 run().then(function (){
-
+    console.log('run executed');
 }).catch(error=> {
-
+    console.log('run failed'+error);
 });
 
 
