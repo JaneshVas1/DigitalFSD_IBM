@@ -98,7 +98,7 @@ async function findPublishedCourses() {
 }
 
 async function findCoursesGreaterthanPrice(conditionPrice) {
-    await Courses.find({price: { $gt: conditionPrice }}).select('name author price').sort({price:-1}).then(function (result) {
+    await Courses.find({price: { $gte: conditionPrice }}).select('name author price').sort({price:-1}).then(function (result) {
         console.log('Display Published Course with Price Condition'+ result);
     })
 
