@@ -22,9 +22,11 @@ router.get('/add-todo',(req, res) => {
 });
 
 
-router.get('/todo:id',(req, res) => {
-
-
+router.get('/getDetails',(req, res) => {
+	console.log("inside getDetails method");
+	res.end();
+	
+/*
     const todo = todos.find(c => c.id === req.params.id);
 
     if (!todo) return res.status(404).send('The todo with the given ID was not found.');
@@ -48,7 +50,7 @@ router.get('/todo:id',(req, res) => {
         '<input type="text" name="title"><br/>' +
 
         '<input type="submit" value="add product"></form>');*/
-        res.sendFile(path.join(rootDir, 'views','add-todo.html'));
+    //    res.sendFile(path.join(rootDir, 'views','add-todo.html'));
 
 });
 
@@ -60,7 +62,10 @@ router.post('/add-todo',(req, res) => {
 
     const { error } = validateTodo(req.body);
 
-    if (error) return res.status(400).send(error.details[0].message);
+    if (error) {
+
+    	return res.status(400).send(error.details[0].message);
+    }
     let st=req.body.status;
 
     if(!st)
