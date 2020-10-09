@@ -108,6 +108,31 @@ async function findCoursesGreaterthanPrice(conditionPrice) {
 
 }
 
+async function findPublishedCoursesGreaterthanPrice(conditionPrice) {
+    await Courses.find({price: { $gte: conditionPrice }}).and({isPublished: false}).select('name author price').sort({price:-1}).then(function (result) {
+        console.log('Display Published Course with Price Condition'+ result);
+    })
+
+        .catch(error => {
+            console.log('Course not found');
+        })
+
+}
+
+
+async function getConditionCourses() {
+
+    return Courses
+
+        .find({isPublished: true})
+
+        .and([{name: {$regex: /by/}}])
+
+        .sort('-price')
+
+        .select('name author price tags isPublished');
+
+}
 
 
 async function run()
@@ -117,8 +142,13 @@ async function run()
     //await getCourses();
     //await findCoursebyId('5f7ee4208c97895808b3fddf');
     //await findCoursebyAuthor('Poi');
-    await findPublishedCourses();
-    await findCoursesGreaterthanPrice(15);
+    //await findPublishedCourses();
+    //await findCoursesGreaterthanPrice(15);
+    //await findPublishedCoursesGreaterthanPrice(15);
+
+    const courses = await getConditionCourses();
+
+    console.log(courses);
 }
 
 run().then(function (){
