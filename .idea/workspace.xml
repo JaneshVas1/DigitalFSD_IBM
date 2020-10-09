@@ -20,8 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="198ae5a6-c8f5-4d61-a088-2b1cacb530cb" name="Default Changelist" comment="Regsitration Form">
+      <change afterPath="$PROJECT_DIR$/Nodejs/podcast/podcast.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/Nodejs/mongodb/courses.js" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/mongodb/courses.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,12 +46,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Pixogram" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Nodejs/podcast" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\Nodejs\podcast" />
       <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\Pixogram" />
     </key>
   </component>
@@ -70,6 +71,7 @@
       <workItem from="1601956577823" duration="670000" />
       <workItem from="1602133380606" duration="3244000" />
       <workItem from="1602137796129" duration="27304000" />
+      <workItem from="1602233883425" duration="3104000" />
     </task>
     <task id="LOCAL-00001" summary="Login Form">
       <created>1601364828468</created>
