@@ -127,6 +127,7 @@ async function getConditionCourses() {
         .find({isPublished: true})
 
         .and([{name: {$regex: /by/}}])
+        .and({price: { $gte: 12 }})
 
         .sort('-price')
 
