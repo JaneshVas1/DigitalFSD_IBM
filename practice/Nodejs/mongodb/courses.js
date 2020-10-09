@@ -126,8 +126,13 @@ async function getConditionCourses() {
 
         .find({isPublished: true})
 
-        .and([{name: {$regex: /by/}}])
-        .and({price: { $gte: 12 }})
+        .or(
+            [{name: {$regex: /by/}},
+            {price: { $gte: 12 }},
+                //or condition working {author: /M.*/i }
+            ])
+        .and({author: /M.*/i })
+
 
         .sort('-price')
 
@@ -135,21 +140,88 @@ async function getConditionCourses() {
 
 }
 
+async function updateCourse(name,author) {
+
+
+   const course = await Courses.findById('5f7ff2551fee9229ac95c058');
+   //const course = await Courses.find({author: 'Mary'});
+    if (!course) {
+        console.log('not found');
+        return;
+    }
+    console.log(course);
+    //course.name=name;
+    //course.author=author;
+    course.set({name:name});
+    course.set({author:author});
+    console.log(course);
+    await course.save().then(() => {
+        console.log('Course updated');
+    });
+
+
+
+}
+
+async function updateCourses()
+{
+    //it updates all record
+    const result = await Courses.updateMany({ author: 'Mosh' }, {
+        $set: { name: 'Learning Cricket',tags: ['test','test2']}
+    });
+    console.log('course update success');
+}
+async function updateCourse()
+{
+    //it updates only first record
+    const result = await Courses.update({ isPublished: true }, {
+        $set: { name: 'Spring'}
+    });
+    console.log('course update success');
+}
+
+
+//update first
+async function updateCourse(id)
+{
+    let course = await Courses.findByIdAndUpdate({_id: id}, {
+        $set: {name: 'Learning Angular', author: 'Mr. Balaguruswamy'}
+    },{new:false});
+    console.log(course);
+}
+
+
 
 async function run()
 {
 
     //createCourses();
     //await getCourses();
-    //await findCoursebyId('5f7ee4208c97895808b3fddf');
-    //await findCoursebyAuthor('Poi');
+    //await findCoursebyId('5a68ff090c553064a218a547');
+    //await findCoursebyAuthor('Mary');
     //await findPublishedCourses();
     //await findCoursesGreaterthanPrice(15);
     //await findPublishedCoursesGreaterthanPrice(15);
 
-    const courses = await getConditionCourses();
+   /* const courses = await getConditionCourses();
 
-    console.log(courses);
+    console.log(courses);*/
+
+    //await updateCourse('Spring','Red Johnson');
+
+    //update multiple courses
+    /*updateCourses().then(() =>{
+        console.log('success');
+    });*/
+
+    //update one course
+    /*updateCourse().then(() =>{
+        console.log('success');
+    });*/
+    //update course by ID with return others return void
+    updateCourse('5f7ff2551fee9229ac95c05c').then(() => {
+        console.log('success');
+    })
 }
 
 run().then(function (){

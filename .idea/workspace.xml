@@ -69,7 +69,7 @@
       <workItem from="1601869997171" duration="433000" />
       <workItem from="1601956577823" duration="670000" />
       <workItem from="1602133380606" duration="3244000" />
-      <workItem from="1602137796129" duration="19519000" />
+      <workItem from="1602137796129" duration="26326000" />
     </task>
     <task id="LOCAL-00001" summary="Login Form">
       <created>1601364828468</created>
@@ -116,13 +116,17 @@
     <option name="LAST_COMMIT_MESSAGE" value="Regsitration Form" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="142" y="0" key="SettingsEditor" timestamp="1602137435202">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1602226784353">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1602137435202" />
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1602226784353" />
     <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1601371109757">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1601371109757" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1602218758596">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1602218758596" />
   </component>
 </project>
