@@ -190,6 +190,20 @@ async function updateCourse(id)
     console.log(course);
 }
 
+async function removeCourse(id){
+    const course=Courses.deleteOne({ _id: id },()=>{
+        console.log(course);
+        console.log('course deleted');
+    });
+
+}
+
+async function removeCourses(){
+
+    const result = await Courses.deleteMany({author:'Mosh'});
+    console.log(result);
+}
+
 
 
 async function run()
@@ -219,9 +233,11 @@ async function run()
         console.log('success');
     });*/
     //update course by ID with return others return void
-    updateCourse('5f7ff2551fee9229ac95c05c').then(() => {
+    /*updateCourse('5f7ff2551fee9229ac95c05c').then(() => {
         console.log('success');
-    })
+    })*/
+    //removeCourse('5f7ff2551fee9229ac95c05d');
+    removeCourses();
 }
 
 run().then(function (){
