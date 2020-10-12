@@ -31,9 +31,10 @@ router.put('/:id', async (req, res) => {
     //updates all records
     //const genre = await Genre.findByIdAndUpdate(req.params.id, {name: req.body.name},{new:true});
     //update One record
-    const genre = await Genre.update({ _id: req.params.id }, {
+    const genre = await Genre.findOneAndUpdate(req.params.id, {name: req.body.name},{new:true});
+    /*const genre = await Genre.update({ _id: req.params.id }, {
         $set: { name: req.body.name}
-    });
+    });*/
     if ((!genre)) {
         return res.status(404).send('The genre with the given ID was not found.');
     }
