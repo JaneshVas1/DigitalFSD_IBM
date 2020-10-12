@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="198ae5a6-c8f5-4d61-a088-2b1cacb530cb" name="Default Changelist" comment="Regsitration Form">
+      <change afterPath="$PROJECT_DIR$/Nodejs/customer/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nodejs/customer/routes/customer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/Nodejs/Nodejsapp-mongodb/routes/vidlyRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/Nodejsapp-mongodb/routes/vidlyRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,13 +47,14 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Nodejs/podcast" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Nodejs/customer" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\Nodejs\customer" />
       <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\Nodejs\podcast" />
       <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\Pixogram" />
     </key>
@@ -73,7 +75,7 @@
       <workItem from="1602133380606" duration="3244000" />
       <workItem from="1602137796129" duration="27304000" />
       <workItem from="1602233883425" duration="6918000" />
-      <workItem from="1602474275819" duration="2360000" />
+      <workItem from="1602474275819" duration="7721000" />
     </task>
     <task id="LOCAL-00001" summary="Login Form">
       <created>1601364828468</created>
@@ -128,9 +130,9 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1601371109757" />
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1602243686072">
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1602479879163">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1602243686072" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1602479879163" />
   </component>
 </project>
