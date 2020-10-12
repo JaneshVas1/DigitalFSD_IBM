@@ -21,11 +21,31 @@ router.get('/',async (req, res) => {
     let result = await Genre.find();
     res.send(result);
 })
+
+
+router.put('/:id', async (req, res) => {
+    const {error} = validateGenre(req.body);
+    if (error) {
+        return res.status(400).send(error.details[0].message);
+    }
+    //updates all records
+    //const genre = await Genre.findByIdAndUpdate(req.params.id, {name: req.body.name},{new:true});
+    //update One record
+    const genre = await Genre.update({ _id: req.params.id }, {
+        $set: { name: req.body.name}
+    });
+    if ((!genre)) {
+        return res.status(404).send('The genre with the given ID was not found.');
+    }
+    res.send(genre);
+});
+
 function validateGenre(genre) {
     const schema = {
         name: Joi.string().min(5).required()
     };
     return Joi.validate(genre, schema);
+
 }
 
 
