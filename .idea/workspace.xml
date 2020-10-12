@@ -20,14 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="198ae5a6-c8f5-4d61-a088-2b1cacb530cb" name="Default Changelist" comment="Regsitration Form">
-      <change afterPath="$PROJECT_DIR$/Nodejs/finalapp/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nodejs/finalapp/models/customer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nodejs/finalapp/models/genre.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nodejs/finalapp/models/todo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nodejs/finalapp/routes/customers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nodejs/finalapp/routes/genres.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Nodejs/finalapp/routes/todos.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/Nodejs/routing/route/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/routing/route/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/Nodejs/routing/route/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/routing/route/shop.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +75,7 @@
       <workItem from="1602133380606" duration="3244000" />
       <workItem from="1602137796129" duration="27304000" />
       <workItem from="1602233883425" duration="6918000" />
-      <workItem from="1602474275819" duration="13155000" />
+      <workItem from="1602474275819" duration="17291000" />
     </task>
     <task id="LOCAL-00001" summary="Login Form">
       <created>1601364828468</created>
