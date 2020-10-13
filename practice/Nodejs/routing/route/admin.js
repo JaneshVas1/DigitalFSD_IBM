@@ -12,7 +12,8 @@ router.get('/add-product',(req, res) => {
 
         '<input type="submit" value="add product"></form>');*/
 
-        res.sendFile(path.join(rootDir, 'views','add-product.html'));
+       // res.sendFile(path.join(rootDir, 'views','add-product.html'));
+    res.render('add-product',{titleView:'Add product'})
 
 });
 
