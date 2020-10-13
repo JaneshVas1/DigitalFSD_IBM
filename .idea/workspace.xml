@@ -20,11 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="198ae5a6-c8f5-4d61-a088-2b1cacb530cb" name="Default Changelist" comment="Regsitration Form">
-      <change afterPath="$PROJECT_DIR$/practice/Nodejs/routing/views/layouts/main-layout.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nodejs/Users/views/layouts/main-layout.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nodejs/Users/views/error.pug" beforeDir="false" afterPath="$PROJECT_DIR$/Nodejs/Users/views/error.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nodejs/Users/views/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/Nodejs/Users/views/index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nodejs/Users/views/users.pug" beforeDir="false" afterPath="$PROJECT_DIR$/Nodejs/Users/views/users.pug" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/practice/Nodejs/routing/views/404.pug" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/routing/views/404.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/Nodejs/routing/views/add-product.pug" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/routing/views/add-product.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/Nodejs/routing/views/shop.pug" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/routing/views/shop.pug" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +80,7 @@
       <workItem from="1602133380606" duration="3244000" />
       <workItem from="1602137796129" duration="27304000" />
       <workItem from="1602233883425" duration="6918000" />
-      <workItem from="1602474275819" duration="33398000" />
+      <workItem from="1602474275819" duration="35388000" />
     </task>
     <task id="LOCAL-00001" summary="Login Form">
       <created>1601364828468</created>
