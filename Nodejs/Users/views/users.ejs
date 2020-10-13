@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title><%=titleView%></title>
+
+    <link rel="stylesheet" href="/css/main.css">
+
+</head>
+
+
+
+<body>
+
+<header class="main-header">
+
+    <nav class="main-header__nav">
+
+        <ul class="main-header__item-list">
+
+            <li class="main-header__item"><a class="active" href="/">Users</a></li>
+
+            <li class="main-header__item"><a href="/add-user">Add User</a></li>
+
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<main>
+
+    <%
+
+    if (users.length > 0) {
+
+    %>
+
+        <div class="grid">
+
+            <%
+
+            for(let user of users) {
+
+            %>
+
+                <article class="card product-item">
+
+                    <header class="card__header">
+
+                        <h1 class="product__title"><%= user.uname %></h1>
+
+                    </header>
+
+
+
+
+
+                </article>
+
+            <% } %>
+
+        </div>
+
+    <% } else { %>
+
+        <h1>No Users Found!</h1>
+
+    <% } %>
+</main>
+
+</body>
+
+
+
+</html>

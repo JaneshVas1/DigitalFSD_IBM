@@ -11,7 +11,7 @@ const users=[];
 
 
 app.get('/', (req, res, next) => {
-    res.render('index', { pageTitle: 'Add User' });
+    res.render('index', { titleView: 'Add User' });
 });
 
 
@@ -31,7 +31,7 @@ app.post('/add-user', (req, res, next) => {
 
     if (error) {
         res.render('error', {
-            titleView:'Users', errormsg:error.details[0].message
+            titleView:'Error Page', errormsg:error.details[0].message
         });
         return;
     }
