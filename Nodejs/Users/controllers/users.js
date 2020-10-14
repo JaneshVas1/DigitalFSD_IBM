@@ -1,4 +1,5 @@
-const users = [];
+//const users = [];
+const User = require('../models/users');
 const Joi=require('joi');
 const errorController = require('./error');
 exports.getAddUser=(req, res)=>
@@ -16,12 +17,14 @@ exports.postAddUser = (req, res) => {
         });
         return;
     }
-
-    users.push({ uname: req.body.uname });
+    const user = new User(req.body.uname);
+    user.save();
+    //users.push({ uname: req.body.uname });
     res.redirect('/users');
 };
 
 exports.getUsers = (req, res) => {
+    const users = User.fetchAll();
     res.render('users', {
         titleView:'Users', users:users
     });
