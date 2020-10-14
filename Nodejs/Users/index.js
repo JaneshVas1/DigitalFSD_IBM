@@ -20,6 +20,7 @@ app.get('/', (req, res, next) => {
 */
 
 app.get('/users',userController.getUsers);
+
 /*
 app.get('/users', (req, res, next) => {
 
@@ -52,7 +53,13 @@ app.post('/add-user', (req, res, next) => {
 });
 */
 
+app.get('/delete',userController.deleteUsers);
+
+
 app.use(errorController.get404);
+
+
+
 
 app.listen(3000,(() => {
 

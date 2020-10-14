@@ -24,11 +24,29 @@ exports.postAddUser = (req, res) => {
 };
 
 exports.getUsers = (req, res) => {
+    User.fetchAll(users => {
+        res.render('users', {
+            users: users,
+            titleView: 'Users',
+            path: '/'
+        });
+    });
+
+    /*
+    //Arrays based fetch
     const users = User.fetchAll();
     res.render('users', {
         titleView:'Users', users:users
     });
+
+     */
 };
+
+exports.deleteUsers = (req, res) => {
+    User.delete();
+    res.redirect('/users');
+    };
+
 
 function validateUser(user) {
     const schema = {
