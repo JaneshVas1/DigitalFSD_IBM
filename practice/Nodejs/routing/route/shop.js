@@ -1,10 +1,14 @@
 const express=require('express');
 const path=require('path');
-
+const homeController = require('../controllers/home');
+const productsController = require('../controllers/product');
 const adminRoutes=require('../route/admin');
 const router=express.Router();
 
 const rootDir=require('.././util/path');
+
+router.get('/',productsController.getProducts);
+/*
 router.get('/',(req, res) => {
 
     //res.send('<h1>Hello from Express!</h1>');
@@ -14,6 +18,11 @@ router.get('/',(req, res) => {
     res.render('shop',{titleView:'Shop', products:adminRoutes.products})
 });
 
+ */
+
+router.get('/home',homeController.getHome);
+
+/*
 router.get('/home',(req, res) => {
 
     //res.send('<h1>Hello from Express!</h1>');
@@ -22,5 +31,7 @@ router.get('/home',(req, res) => {
     //res.sendFile(path.join(rootDir, 'views','shop.html'));
     res.render('home',{titleView:'Home', msg:"Welcome to our world"})
 });
+
+ */
 
 module.exports=router;

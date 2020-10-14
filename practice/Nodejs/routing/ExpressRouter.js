@@ -15,10 +15,14 @@ const adminRoutes=require('./route/admin');
 
 const shopRoutes=require('./route/shop');
 const rootDir=require('./util/path');
+
+const errorController = require('./controllers/error');
 app.use('/admin',adminRoutes);
 
 app.use(shopRoutes);
 
+app.use(errorController.get404);
+/*
 app.use('/', (req, res, next)=>{
 	//path dirname
     //res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
@@ -26,7 +30,7 @@ app.use('/', (req, res, next)=>{
     //res.status(404).sendFile(path.join(rootDir, 'views', '404.html'));
     res.render('404',{titleView:'error page'})
 });
-
+*/
 
 app.listen(3000,(() => {
 
