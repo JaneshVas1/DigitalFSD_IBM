@@ -20,14 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="198ae5a6-c8f5-4d61-a088-2b1cacb530cb" name="Default Changelist" comment="Regsitration Form">
-      <change afterPath="$PROJECT_DIR$/practice/Nodejs/routing/controllers/error.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice/Nodejs/routing/controllers/home.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/practice/Nodejs/routing/controllers/product.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nodejs/Users/controllers/error.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nodejs/Users/controllers/users.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nodejs/Users/views/404.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nodejs/Users/views/404.pug" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nodejs/Users/views/includes/head.ejs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Nodejs/Users/views/includes/nav.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/Nodejs/routing/ExpressRouter.js" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/routing/ExpressRouter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/Nodejs/routing/route/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/routing/route/admin.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/Nodejs/routing/route/shop.js" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/routing/route/shop.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/Nodejs/routing/views/includes/nav.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/routing/views/includes/nav.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nodejs/Users/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Nodejs/Users/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nodejs/Users/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Nodejs/Users/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nodejs/Users/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Nodejs/Users/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nodejs/Users/views/error.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Nodejs/Users/views/error.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nodejs/Users/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Nodejs/Users/views/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nodejs/Users/views/users.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Nodejs/Users/views/users.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +57,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/practice/Nodejs/routing/views/layouts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Nodejs/Users/views/includes" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -62,11 +67,11 @@
       <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\practice\Nodejs\routing\views" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\Nodejs\Users\views\includes" />
+      <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\Nodejs\Users\views" />
       <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\practice\Nodejs\routing\views\layouts" />
       <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\practice\Nodejs\routing\views" />
-      <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\Nodejs\Users\views" />
       <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\Nodejs\Users\public\css" />
-      <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\Nodejs\customer" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -85,7 +90,7 @@
       <workItem from="1602133380606" duration="3244000" />
       <workItem from="1602137796129" duration="27304000" />
       <workItem from="1602233883425" duration="6918000" />
-      <workItem from="1602474275819" duration="47330000" />
+      <workItem from="1602474275819" duration="50601000" />
     </task>
     <task id="LOCAL-00001" summary="Login Form">
       <created>1601364828468</created>

@@ -1,21 +1,26 @@
 const express=require('express');
 const app = express();
-const Joi=require('joi');
+
 const bodyParser=require('body-parser');
+const userController = require('./controllers/users');
+const errorController = require('./controllers/error');
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: false}));
-app.set('view engine', 'pug');
+app.set('view engine', 'ejs');
 
 app.set('views','views');
-const users=[];
+//const users=[];
 
 
+app.get('/',userController.getAddUser);
+/*
 app.get('/', (req, res, next) => {
     res.render('index', { titleView: 'Add User' });
 });
+*/
 
-
-
+app.get('/users',userController.getUsers);
+/*
 app.get('/users', (req, res, next) => {
 
     res.render('users', {
@@ -23,8 +28,11 @@ app.get('/users', (req, res, next) => {
     });
 });
 
+ */
 
 
+app.post('/add-user',userController.postAddUser);
+/*
 app.post('/add-user', (req, res, next) => {
     console.log(req.body.uname);
     const { error } = validateUser(req.body);
@@ -42,9 +50,9 @@ app.post('/add-user', (req, res, next) => {
     res.redirect('/users');
 
 });
+*/
 
-
-
+app.use(errorController.get404);
 
 app.listen(3000,(() => {
 
@@ -52,9 +60,3 @@ app.listen(3000,(() => {
 
 }))
 
-function validateUser(user) {
-    const schema = {
-        uname: Joi.string().min(5).required(),
-    };
-    return Joi.validate(user, schema);
-}
