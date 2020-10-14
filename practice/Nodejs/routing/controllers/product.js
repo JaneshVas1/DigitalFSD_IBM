@@ -7,7 +7,7 @@ exports.getAddProduct=(req, res)=>
 
 
 exports.postAddProduct = (req, res) => {
-    const product = new Product(req.body.title);
+    const product = new Product(req.body.title,req.body.imgurl,req.body.price,req.body.description);
     product.save();
     //products.push({ title: req.body.title });
     res.redirect('/');

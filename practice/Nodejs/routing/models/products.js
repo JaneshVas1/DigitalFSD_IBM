@@ -4,8 +4,11 @@ const path = require('path');
 
 //const products = [];
 module.exports= class Product{
-    constructor(t) {
+    constructor(t,imgurl,price,description) {
         this.title=t;
+        this.imgurl=imgurl;
+        this.price=price;
+        this.description=description;
     }
     save()
     {

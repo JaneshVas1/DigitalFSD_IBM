@@ -20,12 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="198ae5a6-c8f5-4d61-a088-2b1cacb530cb" name="Default Changelist" comment="Regsitration Form">
-      <change afterPath="$PROJECT_DIR$/Nodejs/Users/data/users.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nodejs/Users/controllers/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/Nodejs/Users/controllers/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nodejs/Users/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Nodejs/Users/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nodejs/Users/models/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/Nodejs/Users/models/users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nodejs/Users/views/includes/nav.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Nodejs/Users/views/includes/nav.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Nodejs/Users/data/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/Nodejs/Users/data/users.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/Nodejs/routing/controllers/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/routing/controllers/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/Nodejs/routing/data/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/routing/data/products.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/Nodejs/routing/models/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/routing/models/products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/Nodejs/routing/views/add-product.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/routing/views/add-product.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice/Nodejs/routing/views/shop.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/routing/views/shop.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +84,7 @@
       <workItem from="1602133380606" duration="3244000" />
       <workItem from="1602137796129" duration="27304000" />
       <workItem from="1602233883425" duration="6918000" />
-      <workItem from="1602474275819" duration="56401000" />
+      <workItem from="1602474275819" duration="60001000" />
     </task>
     <task id="LOCAL-00001" summary="Login Form">
       <created>1601364828468</created>
