@@ -43,12 +43,45 @@
             <img src="data:image/<%=image.img.contentType%>;base64,
                      <%=image.img.data.toString('base64')%>" width="300" height="250">
             <div>
-                <h5><%= image.caption %></h5>
+                <p><%= image.caption %></p>
                 <p><%= image.description %></p>
+                <button onclick="deleteImage('<%= image._id %>')">Delete</button>
+                <hr/><hr/><hr/>
             </div>
         </div>
     </div>
     <% }) %>
 </div>
+
+<script>
+
+    function deleteImage(id){
+        console.log("want to delete ??");
+        console.log("Id: "+id);
+
+        fetch("/images/"+id, {
+            method: 'DELETE',
+            // body: JSON.stringify({user: document.getElementById.("username").value, password: $("#password").val()}),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8' // Indicates the content
+            }
+        }).then(res => {
+            return res.json();
+        }).then(res => {
+            console.log(res);// {success: true/false, data: {}, message: ""}
+
+            if(res.success){
+                window.location.href = '/images/';
+            } else {
+                alert(res.message);
+            }
+        }).catch(err => {
+            alert(err);console.log(err);
+        });
+    }
+
+</script>
+
+
 </body>
 </html>

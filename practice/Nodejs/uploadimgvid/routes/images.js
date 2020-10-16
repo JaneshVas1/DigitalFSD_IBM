@@ -20,6 +20,22 @@ router.get('/', (req, res) => {
             res.render('media/images', { images: images });
         }
     });
+
+
+    router.delete("/:id", (req, res)=>{
+        console.log(req.params.id);
+
+        Image.deleteOne({_id: req.params.id})
+            .then(result=>{
+                console.log(result);
+                res.json({success: true})
+            }).catch(err=>{
+            console.log(err);
+            res.json({success: false, message: "Error occurred"})
+        })
+
+// res.json({success: true})
+    })
 });
 
 
