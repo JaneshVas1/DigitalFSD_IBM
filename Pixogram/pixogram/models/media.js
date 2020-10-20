@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Media = mongoose.model('Media', new mongoose.Schema({
-    username: {
+    userId: {
         type: String,
         required: true,
     },

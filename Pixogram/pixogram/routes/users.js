@@ -92,7 +92,7 @@ router.post('/login', async function(req, res, next) {
     //res.send(customer);
     console.log("after token generation");
     console.log(resstr);
-    res.render('index', {data:{ titleView: 'Welcome Page',customer: customer, token: resstr}});
+    res.render('index', {data:{ titleView: 'Welcome Page',customer: customer[0], token: resstr}});
 
   }
 

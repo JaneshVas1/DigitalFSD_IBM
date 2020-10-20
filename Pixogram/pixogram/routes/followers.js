@@ -4,35 +4,38 @@ var passport = require('passport');
 
 const {Followers} = require('../models/followers');
 const {Customer} = require('../models/users');
-router.get('/:username', async function(req, res, next) {
+router.get('/:userId', async function(req, res, next) {
 
-    const followers = await Followers.find({username: req.params.username});
+    const followers = await Followers.find({userId: req.params.userId});
     console.log('Customer'+followers);
 
     if (followers.length==0) {
         console.log('No followers found');
+        res.send({success: false,  message: "No followers found"});
+        //res.end();
 
-        res.end();
+
 
     }
     else {
         console.log('Inside get followers');
-
-        res.end();
+        res.send({success: true, data: { followers }});
+        //res.end();
         //res.send(customer);
 
 }});
 
-router.post('/add-follower',passport.authenticate('jwt', { session: false }),async function(req, res, next) {
+//router.post('/add-follower',passport.authenticate('jwt', { session: false }),async function(req, res, next) {
+router.post('/add-follower',async function(req, res, next) {
 console.log(req.body);
 console.log("inside add follower");
 
-    const customer = await Customer.find({username: req.body.followerusername });
+    const customer = await Customer.find({userId: req.body.followeruserId });
     console.log('Customer'+customer);
     if (!!customer) {
         let follower = {
-            username: req.body.username,
-            followUserName: req.body.followerusername,
+            userId: req.body.userId,
+            followUserId: req.body.followeruserId,
         };
         console.log("Follower initialized");
         Followers.create(follower, (err, item) => {
@@ -53,12 +56,14 @@ console.log("inside add follower");
 
 });
 
-router.delete('/:username', async function(req, res, next) {
+router.delete('/:userId', async function(req, res, next) {
 
-    console.log(req.params.username);
-    const result = await Followers.deleteMany({username:req.params.username});
+    console.log(req.params.userId);
+    const result = await Followers.deleteMany({userId:req.params.userId});
     console.log(result);
-    res.send('respond with a delete resource');
+
+    res.send({success: true,  message: "record deleted"});
+    //res.send('respond with a delete resource');
 });
 
 

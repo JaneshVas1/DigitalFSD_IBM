@@ -3,10 +3,10 @@
 
     <div class="p-2 bd-highlight"><a href="/" class="nav-link text-white">Home</a></div>
 
-    <% if (!!data.customer.username) { %>
+    <% if (!!data.customer) { %>
         <div class="p-2 bd-highlight"><a href="/users/updateuser" class="nav-link text-white">Profile</a></div>
 
-        <div class="p-2 bd-highlight"><a href="/media/<%= data.customer.username %>" class="nav-link text-white">My Media</a></div>
+        <div class="p-2 bd-highlight"><a href="/media/<%= data.customer._id %>" class="nav-link text-white">My Media</a></div>
     <% }
     else {
     %>

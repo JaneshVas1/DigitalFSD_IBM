@@ -8,36 +8,35 @@
     <h1>Welcome to Pixogram application</h1>
   <p><%= data.token %></p>
   <% if (!!data.customer) { %>
-    <!--<h1>Welcome <%= data.customer %></h1>-->
-    <% data.customer.forEach(function(cust) { %>
-
-    <div>
-      <img src="data:image/<%=cust.profilepic.contentType%>;base64,
-                     <%=cust.profilepic.imgdata.toString('base64')%>" width="300" height="250">
+  <div>
+      <img src="data:image/<%=data.customer.profilepic.contentType%>;base64,
+                     <%=data.customer.profilepic.imgdata.toString('base64')%>" width="300" height="250">
       <div>
-        <p><%= cust.firstname %></p>
-        <p><%= cust.lastname %></p>
+        <p><%= data.customer.firstname %></p>
+        <p><%= data.customer.lastname %></p>
 
 
 
 
-        <button onClick="getFollowers()" >Get Followers </button>
+        <button onClick="getFollowers('<%=data.customer._id%>')" >Get Followers </button>
 
-        <button onClick="addFollowers()" >Add Followers </button>
-        <button onClick="getUsers()" >All Users </button>
-        <button onClick="addFollowers(<% if (data.token) { %>'jwt <%= data.token %>'<% }%>)">Add Followers </button>
-        <button onClick="deleteFollowers()">Delete Followers </button>
+        <button onClick="addFollowers('<%=data.customer._id%>','5f898bf42c310943f8f44e3f')" >Add Followers </button>
+        <!--<button onClick="getUsers()" >All Users </button>-->
+       <!-- <button onClick="addFollowers(<% if (data.token) { %>'jwt <%= data.token %>'<% }%>)">Add Followers </button>-->
+        <button onClick="deleteFollowers('<%=data.customer._id%>')">Delete Followers </button>
 
+          <div>
+              <p><b id='result'></b></p>
+          </div>
 
 
       </div>
     </div>
 
-  <% })
+  <%
   }
   %>
    </body>
-
 
 
 

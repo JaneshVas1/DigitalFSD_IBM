@@ -19,18 +19,43 @@
     <% data.media.forEach(function(med) { %>
 
     <div>
-        <img src="data:image/<%=med.media.contentType%>;base64,
-                     <%=med.media.imgdata.toString('base64')%>" width="300" height="250">
+
         <div>
-            <p><%= med.mediatitle %></p>
-            <p><%= med.description %></p>
+            <table>
+                <tr>
+                    <td>  <img src="data:image/<%=med.media.contentType%>;base64,
+                     <%=med.media.imgdata.toString('base64')%>" width="300" height="250"></td>
+                    <td>Media Title : <p><%= med.mediatitle %></p>
+                        Media Description: <p><%= med.description %>
+                    </td>
+                    <td>
+                        Comments
+                        <form action="/media/add-comments"  method="POST">
+                           Add Comment <input type="text" name="comment" />
+                            <input type="text" class="form-control" id="username" name="username" value="<%= data.customer._id %>" required="true" placeholder="Username"/>
+                            <input type="submit" />
+                        </form>
+
+
+                    </td>
 
 
 
 
 
 
-            <button onClick="deleteMedia()">Delete Media </button>
+
+
+                </tr>
+                <tr>
+
+                    </td>
+
+                </tr>
+
+            </table>
+
+            <button onClick="deleteMedia('<%= data.customer._id %>','<%= med._id %>')">Delete Media </button>
 
 
 
@@ -45,13 +70,13 @@
         <table class="center">
             <tr>
                 <td>
-                    <div class="float-left"><label for="username">Username</label></div>
+                    <div class="float-left"><label for="userId">userId</label></div>
                     <div class="float-right">:</div>
 
                 </td>
                 <td>
                     <div class='container'>
-                        <input type="text" class="form-control" id="username" name="username" value="<%= data.customer.username %>" required="true" placeholder="Username"/>
+                        <input type="text" class="form-control" id="userId" name="userId" value="<%= data.customer._id %>" required="true" placeholder="Username"/>
                     </div>
                 </td>
             </tr>
@@ -143,7 +168,12 @@
 </form>
 
 
+<form action="/media/many"  enctype="multipart/form-data" method="POST">
+    Select images: <input type="file" name="image" multiple />
 
+    <input type="text" class="form-control" id="userId" name="userId" value="<%= data.customer._id %>" required="true" placeholder="Username"/>
+    <input type="submit" value="Upload your files"/>
+</form>
 
 
 </body>

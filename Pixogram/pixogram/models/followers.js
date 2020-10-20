@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 const Followers = mongoose.model('Followers', new mongoose.Schema({
-    username: {
+    userId: {
         type: String,
         required: true,
     },
 
-   followUserName: {
+   followUserId: {
        type: String,
        required: true,
    }

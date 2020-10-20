@@ -9,14 +9,14 @@ const {Media} = require('../models/media');
 const {Customer} = require('../models/users');
 
 
-router.get('/:username', async function(req, res, next) {
+router.get('/:userId', async function(req, res, next) {
 //since there is no session added customer as well here
-    let customer = await Customer.findById({_id:'5f8976531c9e70234003a28a'});
-    console.log('Display Customer with ID'+ customer);
+    let customer = await Customer.findById({_id:req.params.userId});
+   // console.log('Display Customer with ID'+ customer);
 
 
-    const medias = await Media.find({username: req.params.username});
-    console.log('Media'+medias);
+    const medias = await Media.find({userId: req.params.userId});
+    //console.log('Media'+medias);
 
     if (medias.length==0) {
         console.log('No Media found');
@@ -25,7 +25,7 @@ router.get('/:username', async function(req, res, next) {
 
     }
     else {
-        console.log('Inside get Medias');
+      //  console.log('Inside get Medias');
         res.render('media', { data:{ titleView: 'Media Page',customer: customer,media: medias} });
         //res.end();
         //res.send(customer);
@@ -33,11 +33,11 @@ router.get('/:username', async function(req, res, next) {
     }});
 
 router.post('/add-media',uploader.single('media'),async function(req, res, next) {
-    console.log(req.body);
-    console.log("inside add media");
+    //console.log(req.body);
+    //console.log("inside add media");
 
       let media = {
-            username: req.body.username,
+            userId: req.body.userId,
             mediatitle: req.body.mediatitle,
             description: req.body.description,
             tags: req.body.tags,
@@ -49,7 +49,7 @@ router.post('/add-media',uploader.single('media'),async function(req, res, next)
 
       };
 
-       console.log("Media initialized");
+      // console.log("Media initialized");
         Media.create(media, (err, item) => {
             if (err) {
 
@@ -58,18 +58,119 @@ router.post('/add-media',uploader.single('media'),async function(req, res, next)
             }
             else {
                 // item.save();
-                res.redirect('/media'+req.body.username);
+                res.redirect('/media/'+req.body.userId);
             }});
 
 });
 
-router.delete('/:username', async function(req, res, next) {
+router.delete('/:id', async function(req, res, next) {
 
-    console.log(req.params.username);
-    const result = await Media.deleteMany({username:req.params.username});
-    console.log(result);
-    res.send('respond with a delete resource');
+    //console.log(req.params.id);
+    const result = await Media.deleteMany({_id:req.params.id});
+    //console.log(result);
+    res.send({success: true,message:" Deleted"});
 });
+
+
+// Uploading the images
+router.post('/many', uploader.array('image', 12), (req, res, next) => {
+    let userId = req.body.userId;
+    const files = req.files;
+    const objs = [];
+
+    req.files.forEach(file=>{
+        objs.push({
+
+
+                userId: userId,
+                mediatitle: "test",
+                description: "descr",
+                tags: ["eee"],
+                effects: "test",
+                media: {
+                    imgdata: new Buffer.from(fs.readFileSync(file.path), 'base64'),
+                    contentType: file.mimetype
+                }
+            })
+
+    });
+
+    Media.insertMany(objs, (err, item) => {
+        if (err) {
+            console.log(err);
+        }
+        else {
+            // item.save();
+            res.redirect('/media/'+userId);
+        }
+    });
+});
+
+
+
+router.post('/add-comments',async function(req, res, next) {
+    console.log(req.body);
+    console.log("inside add comments");
+/*
+    let media = {
+        username: req.body.username,
+        mediatitle: req.body.mediatitle,
+        description: req.body.description,
+        tags: req.body.tags,
+        effects: req.body.effects,
+        media: {
+            imgdata: new Buffer.from(fs.readFileSync(req.file.path), 'base64'),
+            contentType: req.file.mimetype
+        }
+
+    };
+
+    console.log("Media initialized");
+    Media.create(media, (err, item) => {
+        if (err) {
+
+            console.log(err);
+            res.end();
+        }
+        else {
+            // item.save();
+            res.redirect('/media/'+req.body.username);
+        }});
+*/
+    res.redirect('/media/'+req.body.username);
+});
+
+router.get('/comments',async function(req, res, next) {
+    console.log(req.body);
+    console.log("inside get comments");
+    /*
+        let media = {
+            username: req.body.username,
+            mediatitle: req.body.mediatitle,
+            description: req.body.description,
+            tags: req.body.tags,
+            effects: req.body.effects,
+            media: {
+                imgdata: new Buffer.from(fs.readFileSync(req.file.path), 'base64'),
+                contentType: req.file.mimetype
+            }
+
+        };
+
+        console.log("Media initialized");
+        Media.create(media, (err, item) => {
+            if (err) {
+
+                console.log(err);
+                res.end();
+            }
+            else {
+                // item.save();
+                res.redirect('/media/'+req.body.username);
+            }});
+    */
+});
+
 
 
 module.exports = router;
