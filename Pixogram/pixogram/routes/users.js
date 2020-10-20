@@ -28,8 +28,8 @@ router.get('/signup', function(req, res, next) {
 });
 
 /* Modify users Details. */
-router.get('/updateUser',passport.authenticate('jwt', { session: false }), async function(req, res, next) {
-
+//router.get('/updateUser',passport.authenticate('jwt', { session: false }), async function(req, res, next) {
+router.get('/updateUser', async function(req, res, next) {
   console.log("after authorized");
   let customer = await Customer.findById({_id:'5f8976531c9e70234003a28a'});
   console.log('Display Customer with ID'+ customer);

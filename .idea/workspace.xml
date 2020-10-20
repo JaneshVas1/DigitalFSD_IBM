@@ -20,13 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="198ae5a6-c8f5-4d61-a088-2b1cacb530cb" name="Default Changelist" comment="Regsitration Form">
+      <change afterPath="$PROJECT_DIR$/Pixogram/pixogram/models/media.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pixogram/pixogram/routes/media.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pixogram/pixogram/views/media.ejs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nodejs/Users/data/users.json" beforeDir="false" afterPath="$PROJECT_DIR$/Nodejs/Users/data/users.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/Nodejs/routing/controllers/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/routing/controllers/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/Nodejs/routing/data/products.json" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/routing/data/products.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/Nodejs/routing/models/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/routing/models/products.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/Nodejs/routing/views/add-product.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/routing/views/add-product.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/practice/Nodejs/routing/views/shop.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/practice/Nodejs/routing/views/shop.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pixogram/pixogram/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pixogram/pixogram/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pixogram/pixogram/public/javascripts/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pixogram/pixogram/public/javascripts/common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pixogram/pixogram/routes/followers.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pixogram/pixogram/routes/followers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pixogram/pixogram/routes/users.js" beforeDir="false" afterPath="$PROJECT_DIR$/Pixogram/pixogram/routes/users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pixogram/pixogram/views/includes/nav.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Pixogram/pixogram/views/includes/nav.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pixogram/pixogram/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/Pixogram/pixogram/views/index.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,21 +54,21 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Nodejs/Users/views/includes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Pixogram/pixogram/utility" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\practice\Nodejs\routing\views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\Pixogram\pixogram\utility" />
       <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\Nodejs\Users\views\includes" />
       <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\Nodejs\Users\views" />
       <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\practice\Nodejs\routing\views\layouts" />
       <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\practice\Nodejs\routing\views" />
-      <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\Nodejs\Users\public\css" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Backup\IBM\Digital FSD_IBM\Assignment\practice\Nodejs\routing\views" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -84,7 +87,9 @@
       <workItem from="1602133380606" duration="3244000" />
       <workItem from="1602137796129" duration="27304000" />
       <workItem from="1602233883425" duration="6918000" />
-      <workItem from="1602474275819" duration="60001000" />
+      <workItem from="1602474275819" duration="60372000" />
+      <workItem from="1602732849653" duration="39786000" />
+      <workItem from="1603080592509" duration="24788000" />
     </task>
     <task id="LOCAL-00001" summary="Login Form">
       <created>1601364828468</created>
@@ -143,6 +148,10 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1601371109757" />
+    <state x="297" y="151" key="run.anything.popup" timestamp="1603097805741">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1603097805741" />
     <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1602479879163">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

@@ -1,0 +1,10 @@
+cmd>
+mongo
+
+show dbs
+list all databases
+
+use play-ground  ( use database)
+
+show collections
+(list all collections in db)

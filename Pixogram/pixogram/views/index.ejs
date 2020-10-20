@@ -2,7 +2,7 @@
 <link rel='stylesheet' href='/stylesheets/common.css' />
     <!--<link rel='stylesheet' href='/stylesheets/style.css' />-->
   </head>
-<script src="/javascripts/common.js"></script>
+<script type="text/javascript" src="/javascripts/common.js"></script>
   <body class="container">
   <%- include('includes/nav.ejs') %>
     <h1>Welcome to Pixogram application</h1>
@@ -22,7 +22,11 @@
 
 
         <button onClick="getFollowers()" >Get Followers </button>
+
+        <button onClick="addFollowers()" >Add Followers </button>
         <button onClick="getUsers()" >All Users </button>
+        <button onClick="addFollowers(<% if (data.token) { %>'jwt <%= data.token %>'<% }%>)">Add Followers </button>
+        <button onClick="deleteFollowers()">Delete Followers </button>
 
 
 
@@ -32,6 +36,13 @@
   <% })
   }
   %>
+   </body>
 
-  </body>
+
+
+
+
+
+
+
 </html>
