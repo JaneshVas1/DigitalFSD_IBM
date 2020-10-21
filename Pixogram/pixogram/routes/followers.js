@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var passport = require('passport');
+const userController = require('../controllers/users');
 
 const {Followers} = require('../models/followers');
 const {Customer} = require('../models/users');
@@ -11,7 +12,8 @@ router.get('/:userId', async function(req, res, next) {
 
     if (followers.length==0) {
         console.log('No followers found');
-        res.send({success: false,  message: "No followers found"});
+        //res.send({success: false,  message: "No followers found"});
+        res.render('followers', { data:{ titleView: 'Followers Page', customer: { _id:req.params.userId }, followers: followers  } });
         //res.end();
 
 
@@ -19,7 +21,19 @@ router.get('/:userId', async function(req, res, next) {
     }
     else {
         console.log('Inside get followers');
-        res.send({success: true, data: { followers }});
+        let followIDs=[];
+        for (let i=0;i<followers.length;i++)
+            followIDs.push(followers[i].followUserId);
+
+
+        console.log(followIDs);
+        //res.send({success: true, data: { followers }});
+        userController.getUsers(followIDs,function(err,cust){
+            //console.log(cust);
+            res.render('followers', { data:{ titleView: 'Followers Page', customer: { _id:req.params.userId }  , followers: followers, users:cust } });
+
+        })
+
         //res.end();
         //res.send(customer);
 

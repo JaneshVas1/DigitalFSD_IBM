@@ -9,6 +9,7 @@ const passport = require('passport');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var followersRouter = require('./routes/followers');
+var blockedRouter = require('./routes/blocked');
 var mediaRouter = require('./routes/media');
 
 
@@ -33,6 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/followers', followersRouter);
+app.use('/blockers', blockedRouter);
 app.use('/media', mediaRouter);
 
 
