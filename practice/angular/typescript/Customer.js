@@ -1,5 +1,6 @@
 "use strict";
 exports.__esModule = true;
+exports.Customer = void 0;
 //name of the class
 var uuid_1 = require("uuid");
 var Customer = /** @class */ (function () {
@@ -14,6 +15,7 @@ var Customer = /** @class */ (function () {
     };
     return Customer;
 }());
+exports.Customer = Customer;
 var temp = uuid_1.v4();
 var arr = temp.split('-');
 var myCustomer = new Customer(arr[4], 'John', 'Doe', 'abcd');

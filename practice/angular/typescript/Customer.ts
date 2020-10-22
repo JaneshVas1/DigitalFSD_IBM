@@ -1,12 +1,13 @@
 //name of the class
 import { v4 as uuidv4 } from 'uuid';
-class Customer
+export class Customer
 {
     //properties
     private customerId:any
     private  firstName: string;
     private  lastName: string;
     private email: string;
+    protected rank:String
 
     constructor(customerId: any ,firstName: string, lastName: string, email: string) {
         this.customerId=customerId;
