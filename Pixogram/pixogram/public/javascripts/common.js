@@ -33,6 +33,34 @@ function getUsers() {
 
 }
 
+
+function unFollow(userId,followUserId) {
+
+    alert("inside");
+
+    fetch("/followers/"+userId+"/"+followUserId, {
+        method: 'DELETE',
+        // body: JSON.stringify({user: document.getElementById.("username").value, password: $("#password").val()}),
+        //body: JSON.stringify({userId: userId, followeruserId: followeruserId}),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8', // Indicates the content
+            //'Authorization':'jwt '+token
+        }
+    }).then(res => {
+        console.log(res);// {success: true/false, data: {}, message: ""}
+
+        if(res.success){
+            window.location.href = '/followers/'+userId;
+        } else {
+            alert(res.message);
+        }
+    }).catch(err => {
+        alert(err);console.log(err);
+    });
+
+
+}
+
 function addFollowers(userId,followeruserId)
 {
     alert("inside");

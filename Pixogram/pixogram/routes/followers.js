@@ -70,10 +70,20 @@ console.log("inside add follower");
 
 });
 
-router.delete('/:userId', async function(req, res, next) {
+router.delete(':userId', async function(req, res, next) {
 
     console.log(req.params.userId);
     const result = await Followers.deleteMany({userId:req.params.userId});
+    console.log(result);
+
+    res.send({success: true,  message: "record deleted"});
+    //res.send('respond with a delete resource');
+});
+
+router.delete(':userId/:followUserId', async function(req, res, next) {
+
+    console.log(req.params.userId);
+    const result = await Followers.deleteOne({userId:req.params.userId, followUserId:req.params.followUserId});
     console.log(result);
 
     res.send({success: true,  message: "record deleted"});
