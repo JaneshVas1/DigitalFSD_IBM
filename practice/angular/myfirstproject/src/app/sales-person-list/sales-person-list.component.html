@@ -8,6 +8,7 @@
     <th scope="col">Last Name</th>
     <th scope="col">Email</th>
     <th scope="col">Sales Volume</th>
+    <th scope="col">Meet Quota</th>
   </tr>
   </thead>
   <tbody>
@@ -18,6 +19,11 @@
     <td>{{tempSalesPerson.lastName}}</td>
     <td>{{tempSalesPerson.email}}</td>
     <td>{{tempSalesPerson.salesVolume}}</td>
+    <td>
+      <div *ngIf="tempSalesPerson.salesVolume>60000">Yes</div>
+      <div *ngIf="tempSalesPerson.salesVolume===60000">Meet</div>
+      <div *ngIf="tempSalesPerson.salesVolume<60000">No</div>
+    </td>
   </tr>
   </tbody>
 </table>

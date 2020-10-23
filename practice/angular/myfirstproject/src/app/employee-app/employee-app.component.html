@@ -41,7 +41,12 @@
     <td>{{tempConsultant.lastname}}</td>
     <td>{{tempConsultant.email}}</td>
     <td>{{tempConsultant.hourlyamount}}</td>
-    <td>{{tempConsultant.specialization}}</td>
+    <td>
+      <div *ngIf="tempConsultant.specialization===0">Testing</div>
+      <div *ngIf="tempConsultant.specialization===1">Consultant</div>
+      <div *ngIf="tempConsultant.specialization===2">Developer</div>
+    </td>
+
   </tr>
   </tbody>
 </table>
