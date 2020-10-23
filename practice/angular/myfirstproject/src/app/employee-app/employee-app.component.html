@@ -1,0 +1,48 @@
+<h2>Employee-list works!</h2>
+<p>Regular Employees</p>
+<table class="table">
+
+  <thead>
+  <tr>
+    <th scope="col">First Name</th>
+    <th scope="col">Last Name</th>
+    <th scope="col">Email</th>
+    <th scope="col">Salary</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <tr *ngFor="let tempEmployees of regEmployeeList">
+    <!--<th scope="row">{{tempSalesPerson.id}}</th>-->
+    <td>{{tempEmployees.firstname}}</td>
+    <td>{{tempEmployees.lastname}}</td>
+    <td>{{tempEmployees.email}}</td>
+    <td>{{tempEmployees.salary}}</td>
+  </tr>
+  </tbody>
+</table>
+<p>Consultant</p>
+<table class="table">
+
+  <thead>
+  <tr>
+    <th scope="col">First Name</th>
+    <th scope="col">Last Name</th>
+    <th scope="col">Email</th>
+    <th scope="col">Hourly Amount</th>
+    <th scope="col">Specialization</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <tr *ngFor="let tempConsultant of consultantList">
+    <!--<th scope="row">{{tempSalesPerson.id}}</th>-->
+    <td>{{tempConsultant.firstname}}</td>
+    <td>{{tempConsultant.lastname}}</td>
+    <td>{{tempConsultant.email}}</td>
+    <td>{{tempConsultant.hourlyamount}}</td>
+    <td>{{tempConsultant.specialization}}</td>
+  </tr>
+  </tbody>
+</table>
+
