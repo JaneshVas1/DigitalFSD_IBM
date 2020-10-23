@@ -7,6 +7,7 @@
     <th scope="col">First Name</th>
     <th scope="col">Last Name</th>
     <th scope="col">Email</th>
+    <th scope="col">Date of Reporting</th>
     <th scope="col">Sales Volume</th>
     <th scope="col">Meet Quota</th>
   </tr>
@@ -18,7 +19,8 @@
     <td>{{tempSalesPerson.firstName}}</td>
     <td>{{tempSalesPerson.lastName}}</td>
     <td>{{tempSalesPerson.email}}</td>
-    <td>{{tempSalesPerson.salesVolume}}</td>
+    <td>{{tempSalesPerson.dateOfreporting| date: 'dd/MM/yyyy'}}</td>
+    <td>{{tempSalesPerson.salesVolume| currency: 'USD'}}</td>
     <td>
       <div *ngIf="tempSalesPerson.salesVolume>60000">Yes</div>
       <div *ngIf="tempSalesPerson.salesVolume===60000">Meet</div>

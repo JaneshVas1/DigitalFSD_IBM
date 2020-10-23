@@ -17,7 +17,7 @@
     <td>{{tempEmployees.firstname}}</td>
     <td>{{tempEmployees.lastname}}</td>
     <td>{{tempEmployees.email}}</td>
-    <td>{{tempEmployees.salary}}</td>
+    <td>{{tempEmployees.salary | currency: 'INR'}}</td>
   </tr>
   </tbody>
 </table>
@@ -40,7 +40,7 @@
     <td>{{tempConsultant.firstname}}</td>
     <td>{{tempConsultant.lastname}}</td>
     <td>{{tempConsultant.email}}</td>
-    <td>{{tempConsultant.hourlyamount}}</td>
+    <td>{{tempConsultant.hourlyamount | currency : 'USD'}}</td>
     <td>
       <div *ngIf="tempConsultant.specialization===0">Testing</div>
       <div *ngIf="tempConsultant.specialization===1">Consultant</div>
