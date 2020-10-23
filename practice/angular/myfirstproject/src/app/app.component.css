@@ -1,0 +1,37 @@
+body {
+   background-color: lightcyan;
+}
+
+
+
+h1 {
+  color: darkgreen;
+  text-align: center;
+
+}
+
+p {
+  font-family: verdana;
+  font-size: 20px;
+
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+/*
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+
+}
+/* setting the text-align property to center*/
+
+
+label {
+  font-family: verdana;
+  font-size: 15px;
+  color: darkgreen;
+
+}
