@@ -165,13 +165,18 @@ function deleteMedia(username,id)
             //'Authorization':'jwt '+token
         }
     }).then(res => {
+        console.log("Got response");
         console.log(res);// {success: true/false, data: {}, message: ""}
-
+        window.location.reload();
+        /*
         if(res.success){
             window.location.href = '/media/'+username;
+            window.location.reload();
         } else {
+            alert("inside else")
             alert(res.message);
-        }
+            window.location.reload();
+        }*/
     }).catch(err => {
         alert(err);console.log(err);
     });

@@ -41,6 +41,9 @@ router.get('/:userId', async function(req, res, next) {
 
     }});
 
+
+
+
 router.post('/add-media',uploader.single('media'),async function(req, res, next) {
     //console.log(req.body);
     //console.log("inside add media");
@@ -77,7 +80,10 @@ router.delete('/:id', async function(req, res, next) {
     //console.log(req.params.id);
     const result = await Media.deleteMany({_id:req.params.id});
     //console.log(result);
-    res.send({success: true,message:" Deleted"});
+
+    res.json({success: true,message:" Deleted"});
+
+    //res.send({success: true,message:" Deleted"});
 });
 
 

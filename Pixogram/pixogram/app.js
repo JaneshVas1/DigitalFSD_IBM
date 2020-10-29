@@ -11,6 +11,8 @@ var usersRouter = require('./routes/users');
 var followersRouter = require('./routes/followers');
 var blockedRouter = require('./routes/blocked');
 var mediaRouter = require('./routes/media');
+var accountRouter = require('./routes/account');
+var uploadRouter = require('./routes/upload');
 
 
 
@@ -36,6 +38,8 @@ app.use('/users', usersRouter);
 app.use('/followers', followersRouter);
 app.use('/blockers', blockedRouter);
 app.use('/media', mediaRouter);
+app.use('/account', accountRouter);
+app.use('/upload', uploadRouter);
 
 
 let configureJwtPassport = require('./utility/jwt-passport');
@@ -59,6 +63,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;
 
