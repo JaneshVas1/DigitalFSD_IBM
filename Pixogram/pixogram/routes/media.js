@@ -14,7 +14,7 @@ const {Customer} = require('../models/users');
 
 router.get('/:userId', async function(req, res, next) {
 //since there is no session added customer as well here
-    let customer = await Customer.findById({_id:req.params.userId});
+   // let customer = await Customer.findById({_id:req.params.userId});
    // console.log('Display Customer with ID'+ customer);
 
 
@@ -28,7 +28,6 @@ router.get('/:userId', async function(req, res, next) {
 
     }
     else {
-
 
         mediaController.getComments(medias,req.params.userId,function(err,comments){
 
@@ -167,7 +166,7 @@ router.post('/add-comments',async function(req, res, next) {
             Comments.create(comments,(errnew,commitem)=> {
                 if (errnew) {
                     console.log("unable to create comments"+errnew);
-                    res.end();
+                    res.redirect('/media/'+req.body.username);
                 } else
                     console.log("Comments created");
                     res.redirect('/media/'+req.body.username);

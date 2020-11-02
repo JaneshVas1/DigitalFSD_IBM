@@ -15,13 +15,18 @@
 
 
         <h1>Search Page</h1>
-
-
-
+        <h3>All Users</h3>
 
 		<% if (!!data.customer) { %>
-		    <% if (!!data.users) { %>
-		        <% data.users.forEach(function(cust) { %>
+		    <% if (!!data.users) { 
+		    %>
+		    <br>
+        	<br>
+		        <% data.users.forEach(function(cust) { 
+		        %>
+		        
+		       
+			<div class="center">
 		    <div>
 		        <img src="data:image/<%=cust.profilepic.contentType%>;base64,
 		                     <%=cust.profilepic.imgdata.toString('base64')%>" width="300" height="250">
@@ -30,13 +35,16 @@
 		            <p><%= cust.lastname %></p>
 
 
-		            <button onClick="addFollowers('<%= data.customer._id %>','<%= cust._id %>')" >Follow </button>
-		            <button onClick="blockUser('<%= data.customer._id %>','<%= cust._id %>')" >Block </button>
+		            <button class="btn btn-secondary" onClick="addFollowers('<%= data.customer._id %>','<%= cust._id %>')" >Follow </button>
+		            <button class="btn btn-secondary" onClick="blockUser('<%= data.customer._id %>','<%= cust._id %>')" >Block </button>
 
 
 
 		        </div>
 		    </div>
+			</div>
+
+
 		    <% })
 		    }
 		    } 
