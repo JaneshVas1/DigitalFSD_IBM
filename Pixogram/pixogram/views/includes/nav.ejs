@@ -3,7 +3,7 @@
 
     <div class="p-2 bd-highlight"><a href="/" class="nav-link text-white">Home</a></div>
 
-    <% if (!!data.customer) { %>
+    <% if (data.isAuthenticated) { %>
         <div class="p-2 bd-highlight"><a href="/account/update" class="nav-link text-white">Account</a></div>
         <div class="p-2 bd-highlight"><a href="/followers/<%= data.customer._id %>" class="nav-link text-white">Followers</a></div>
         <div class="p-2 bd-highlight"><a href="/upload/<%= data.customer._id %>" class="nav-link text-white">Upload Media</a></div>

@@ -6,7 +6,8 @@
   <%- include('includes/nav.ejs') %>
     <h1>Welcome to Pixogram application</h1>
   <p><%= data.token %></p>
-  <% if (!!data.customer) { %>
+    <% if (data.isAuthenticated) { %>
+  <% /*if (!!data.customer) { */%>
   <div>
       <img src="data:image/<%=data.customer.profilepic.contentType%>;base64,
                      <%=data.customer.profilepic.imgdata.toString('base64')%>" width="300" height="250">

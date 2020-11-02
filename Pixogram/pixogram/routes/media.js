@@ -7,6 +7,7 @@ var fs = require('fs');
 const {Media} = require('../models/media');
 const {Newsfeed} = require('../models/newsfeed');
 const {Comments} = require('../models/comments');
+const mediaController = require('../controllers/mediadetails');
 
 const {Customer} = require('../models/users');
 
@@ -22,17 +23,30 @@ router.get('/:userId', async function(req, res, next) {
 
     if (medias.length==0) {
         console.log('No Media found');
-        res.render('media', { data:{ titleView: 'Media Page',customer: customer} });
+        res.render('media', { data:{ titleView: 'Media Page', customer: req.session.user , isAuthenticated: req.session.isLoggedIn} });
         res.end();
 
     }
     else {
+
+
+        mediaController.getComments(medias,req.params.userId,function(err,comments){
+
+        if (comments.length==0)  {
+            res.render('media', { data:{ titleView: 'Media Page', customer: req.session.user , isAuthenticated: req.session.isLoggedIn,media: medias} });
+        }else{
+            res.render('media', { data:{ titleView: 'Media Page', customer: req.session.user , isAuthenticated: req.session.isLoggedIn,media: medias,comments: comments} });
+        }
+            //console.log(cust);
+
+        })
+/*
         const comments = await Comments.find({userId: req.params.userId});
         if (comments.length==0)  {
             res.render('media', { data:{ titleView: 'Media Page',customer: customer,media: medias} });
         }else{
             res.render('media', { data:{ titleView: 'Media Page',customer: customer,media: medias,comments: comments} });
-        }
+        }*/
 
       //  console.log('Inside get Medias');
         //res.render('media', { data:{ titleView: 'Media Page',customer: customer,media: medias} });

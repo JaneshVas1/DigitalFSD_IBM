@@ -96,7 +96,18 @@ router.post('/login', async function(req, res, next) {
         if(!!result) {
           let resstr="";
           resstr=require(__dirname + '/../utility/token')( customer , resstr);
-          res.render('index', {data:{ titleView: 'Welcome Page',customer: customer, token: resstr}});
+
+          req.session.isLoggedIn = true;
+          req.session.user = customer;
+          req.session.save(err => {
+              console.log(err);
+             // res.render('index', {data:{ titleView: 'Welcome Page',customer: customer, token: resstr}});
+             res.redirect('/');
+
+          });  
+
+
+          //res.render('index', {data:{ titleView: 'Welcome Page',customer: customer, token: resstr}});
 
         }
         else {

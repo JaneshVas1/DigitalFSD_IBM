@@ -5,6 +5,8 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const mongoose = require('mongoose');
 const passport = require('passport');
+const session = require('express-session');
+const MongoDBStore = require('connect-mongodb-session')(session);
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -18,11 +20,19 @@ var uploadRouter = require('./routes/upload');
 
 var app = express();
 
-mongoose.connect('mongodb://localhost/pixogram',{useNewUrlParser: true, useUnifiedTopology: true})
+const MONGODB_URI =
+  'mongodb://localhost:27017/pixogram?retryWrites=true&w=majority';
+
+mongoose.connect(MONGODB_URI,{useNewUrlParser: true, useUnifiedTopology: true})
 
     .then(() => console.log('Connected to MongoDB...'))
 
     .catch(err => console.error('Could not connect to MongoDB...'));
+
+const store = new MongoDBStore({
+  uri: MONGODB_URI,
+  collection: 'sessions'
+});    
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -32,6 +42,14 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(
+  session({
+    secret: 'my secret',
+    resave: false,
+    saveUninitialized: false,
+    store: store
+  })
+);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
@@ -45,6 +63,18 @@ app.use('/upload', uploadRouter);
 let configureJwtPassport = require('./utility/jwt-passport');
 configureJwtPassport(passport => {
   app.use(passport.initialize());
+});
+
+app.use((req, res, next) => {
+  if (!req.session.user) {
+    return next();
+  }
+  User.findById(req.session.user._id)
+    .then(user => {
+      req.user = user;
+      next();
+    })
+    .catch(err => console.log(err));
 });
 
 
